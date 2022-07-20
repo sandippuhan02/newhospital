@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            /* margin:10%; */
+           
+            width:100vw;
+            border-collapse: collapse;
+            
+        }
+        table,td,th{
+           
+            /* border:1px solid black; */
+        }
+        #heading{
+            height:70px;
+
+            background-color: #8BD6F6;
+            
+        }
+       
+        
+        th,td{
+            padding:40px 45px;
+            
+        }
+        
+        tr:nth-child(even){
+            background-color: rgb(215, 213, 213);
+        }
+        caption{
+            font-size:2rem;
+        }
+        .btn{
+            /* background-color:gray; */
+            
+            background-color:#8BD6F6;
+            padding:1px 3px;
+        }
+        .center{
+            text-align: center;
+
+        }
+
+ </style>
+</head>
+<body>
+    <!-- <h1>patient requests</h1> -->
+   
+
+    <%if(typeof abc != 'undefined'){%> 
+       
+        <table >
+            <caption>Patient Requests</caption>
+            
+            
+            <tr id="heading">
+                <th>Name</th>
+                <th>Email</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Department</th>
+                <th>Approve</th>
+                <th>Reject</th>
+            </tr>
+
+            <%for(var i=0; i<abc.length; i++){%>
+            <tr>
+                <td><%= abc[i].name%></td>
+                <td><%= abc[i].email%></td>
+                <td><%= abc[i].age%></td>
+                <td><%= abc[i].gender%></td>
+                <td><%= abc[i].department%></td>
+               
+                <td  class="center"><form action="/registers" method="post">
+                    <input type="text" name="pendingId" value=<%= abc[i]._id %> style="display: none;"/>
+                    <input class="btn" type="submit" value="Insert">
+                </form></td>
+                <td class="center"><form action="/delete" method="post">
+                    <input type="text" name="pendingId" value=<%= abc[i]._id %> style="display: none;"/>
+                    <input class="btn" type="submit" value="Delete">
+                </form></td>
+            </tr>
+            <%}%>
+        </table>
+    
+    
+    <%}%>
+    
+</body>
+</html>

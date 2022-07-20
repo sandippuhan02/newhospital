@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous"> -->
+    <style>
+      *{
+        padding:0;
+        margin:0;
+      }
+       .loginbox{
+        width:100%;
+        height:80vh;
+        background: url("../images/adminlog.jpg") no-repeat;
+        background-size: cover;
+        align-items: center;
+        display: flex;       
+       }
+       .loginbox > form{
+        background-color: #3065b5;
+        height: 450px;
+        width: 375px;
+        color:white;
+        padding:40px;
+        position: absolute;
+        right: 50px;
+       }
+       .center{
+        text-align: center;
+       }
+
+       .loginbox p{
+        margin-bottom: 2%;
+        font-weight: bold;
+       }
+
+
+       .loginbox input{
+        width:100%;
+        margin-bottom: 20px;
+
+       }
+       .item{
+        border:none;
+        background: transparent;
+        border-bottom: 1px solid #fff;
+        height:40px;
+        color:#fff;
+       
+        font-size: 16px;
+       }
+
+       .loginbox input[type="submit"]{
+        border:none;
+        margin-top: 15%;
+        height:40px;
+        background: rgba(255,255,255,.2);
+        color:#fff;
+        font-size: 20px;
+        border-radius: 5px;
+
+       }
+       .loginbox h3{
+        margin-bottom: 15%;
+       }
+      .footer{
+        display: flex;
+        height: 200px;
+        background-color: white;
+        align-items: flex-start;
+        justify-content: center;
+        padding-top: 50px;
+      }
+      .footer > img {
+        height: 150px;
+        max-width: 500px;
+        object-fit: contain;
+      }
+       
+        
+      
+    </style>
+</head>
+<body>
+  <h1 class="center">Admin login page </h1>
+  <div class="loginbox">
+      <form action="/adminlog" method="post">
+          <h3 class="center">Admin Login</h2>
+          <p>Admin </p>
+          <input name="ainputname" class="item" type="text" placeholder="Enter Username">
+          <p>password </p>
+          <input name="apass" class="item" type="text" placeholder="password">
+          <input type="submit" value=" LogIn">
+
+      </form>
+  </div>
+  <div class="footer">
+    <img src="../images/bd.png" alt="" >
+    <img src="../images/cd.png" alt="" >
+    <img src="../images/ed.png" alt="" >
+  </div>
+    
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+        }
+        h1{
+            text-align: center;
+            font-size: 2.3rem;
+            color:beige;
+        }
+        section{
+            background:url("../images/sunset_scenery-5120x2880.jpg");
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height:100vh;
+            opacity:0.65;
+            z-index:-1;
+
+        }
+        .form{
+
+            display:flex;
+            /* align-items: center; */
+            justify-content: center;
+            margin-top: 7.5%;
+           
+          
+        }
+        .form form input{
+            width:80%;
+            /* padding:6px; */
+            border-radius: 5px;
+            /* margin:5px; */
+            border:2px solid red;
+           
+        }
+        .form form {
+            width:400px;
+            padding-left:10px;
+           
+            background:rgba(0,0,0,0.5)
+           
+        }
+        .btnsubmit{
+           
+            background-color: brown;
+            color:white;
+            border-radius: 5px;
+            padding:2px 6px;
+            font-size: 15px;
+            border:2px solid black;
+        }
+        .form form .items{
+            margin-left:25px;
+        }
+       
+
+    </style>
+</head>
+<body>
+    
+    <section id="register">
+        <h1 class="center">Register Here</h1>
+
+       <div class="form">
+        <form action="/register" method="post">
+           <div class="items">
+            <label for="name">name</label><br>
+            <input type="name"name="inputname" placeholder="enter your name">
+           </div>
+
+           <div class="items">
+            <label for="age">age</label><br>
+            <input type="age"name="inputage" placeholder="enter yourage">
+           </div>
+          
+           <div class="items">
+            <label for="email">Email</label><br>
+            <input type="email" name="inputemail" placeholder="enter your email">
+           </div>
+           <div class="items">
+            <label for="phone">Phone</label><br>
+            <input type="number" name="inputphone" placeholder="enter your number">
+           </div>
+<!-- 
+           <div class="items">
+            <label for="Department">department:</label>
+            <select name="dept" id="inputdept">
+                <option value="cancer">cancer</option>
+                <option value="cancer">abc</option>
+                <option value="cancer">cdr</option>
+
+            </select>
+            
+           </div> -->
+           <div>
+            <input type="radio" name="dept" value ="cancer">cancer
+            <input type="radio" name="dept" value ="radiology">radiology
+            <input type="radio" name="dept" value ="xray">xray
+           </div>
+
+           <div class="items">
+            <label for="password">password</label><br>
+            <input type="password" name="inputpassword"placeholder="enter your password">
+           </div>
+           <div class="items">
+            <label for="password">confirm password</label><br>
+            <input type="password" name="inputcnfpassword"placeholder="confirm password">
+           </div>
+
+          <!-- <div class="items">
+           <select name="gender">
+            <option value="m">male</option>
+            <option value="f">female</option>
+           </select>
+           </div>  -->
+           <div class="items">
+            <label for="gender">Gender :</label><br>
+            <input type="radio" name="gender" value="m">male
+            <input type="radio" name="gender" value="f">female
+           </div>
+
+
+          <input type="submit" class="btnsubmit" value="register">
+
+        </form>
+       </div>
+
+    </section>
+
+    
+</body>
+</html>

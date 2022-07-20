@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>doctor appointed page</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+        body{
+            background-color: aqua;
+        }
+        .main{
+            margin:3% 5%;
+                border:2px solid black;
+                height:420px;
+                background-color: burlywood;
+                padding:5%;
+        }
+
+        
+            div.main .box{
+                width:300px;
+                height:350px;
+                background-color: antiquewhite;
+                margin:auto;
+                padding:25px 0px  0px 35px;
+                font-size: 1rem;
+        }
+        input[type="submit"]{
+            background-color:darksalmon;
+            color:black;
+            padding:4px 22px;
+            margin-top:30px;
+            margin-left:25%;
+        }
+
+        div.box form{
+            margin-top: 3%;
+        }
+
+        select[name="doctors"] option{
+           
+                background-color:rgba(0,0,0,0.5);
+                color:white;
+                padding:4px;
+                width:100px;
+            }
+            .center{
+                text-align: center;
+            }
+            items
+            {
+                border-bottom:1px solid black;
+            }
+        
+        
+
+
+        
+    </style>
+</head>
+
+<body>
+
+
+
+   
+        <h1 class="center">doctor appointed page</h1>
+
+
+
+
+        <div class="main">
+
+            <div class="box">
+
+
+              <p class="items"><strong>Name:</strong> <%= pendingData.name%></p><br>
+              <p class="items">Email: <%= pendingData.email%></p><br>
+              <p class="items">Phone: <%= pendingData.phone%></p><br>
+              <p class="'items">Age: <%= pendingData.age%></p><br>
+              <p class="items">Department: <%= pendingData.department%></p>
+              
+              <form method="post" action="/registerPatient/patient?id=<%= pendingData._id%>">
+                <p>Dotors available
+            
+                    <select name="doctors">
+            
+                        <% for(var i=0;i<doctorData.length; i++){%>
+                            <option value="<%= doctorData[i].name %>">
+                                <%= doctorData[i].name%>
+                            </option>
+                            <%}%>
+                    </select><br>
+             
+                    <input type="submit" value="Approve" />
+                </p>
+            </form>
+               
+                        
+
+
+
+
+
+            </div>
+        </div>
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,394 @@
+*{
+    padding:0;
+    margin:0;
+}
+
+/*top header*/
+#top{
+    position: relative;
+    top:0;
+    left:0;
+}
+#top::before{
+    content:"";
+    position: absolute;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    background-color: rgb(146, 146, 225);
+    z-index:-1;   
+}
+#top ul{
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    padding:6px;
+}
+#top ul div>span{
+    /* padding-left:10px; */
+    padding:2px 10px;
+    border:2px solid black;
+    background-color: red;
+    border-radius: 10px;
+    margin:1px 10px;
+
+}
+#top ul div a{
+    color:white;
+    text-decoration: none;
+    font-size:1rem;
+    /* padding-left:3px; */
+}
+#top ul div :hover{
+    background-color: burlywood;
+    color:gray;
+   
+   
+}
+
+#top ul>li{
+    text-decoration: none;
+    list-style:none;
+    color:antiquewhite
+}
+
+
+/*nav bar designing*/
+#header {
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:0 5%;
+    
+}
+#header{
+    position:relative;   
+}
+
+#header::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+   
+    background-color: rgb(125, 208, 158);
+   
+    opacity: 0.5;
+    /* background-color: rgb(118, 185, 212); */
+    z-index:-1;
+    width:100%;
+    height:100%;
+}
+
+
+/*logo and images*/
+#logo{
+    margin:5px 22px;
+}
+#logo > img{
+    width:86px;
+    height:84px;
+
+}
+#header >ul{
+    display:flex;
+    align-items: "center";
+} 
+/*list items decoration*/
+#header >ul>li{
+    display:block;
+    text-decoration:none ;
+    list-style: none;
+    padding:9px 26px;
+    
+
+}
+#header >ul>li>a{
+    color:black;
+    text-decoration:none ;
+    font-size: 1.2rem;
+}
+.btn:hover{
+    text-decoration: none;
+}
+#header >ul>li:hover{
+    color:rgb(240, 225, 225);
+    border-bottom:5px solid blue;
+    border-radius: 5px;
+   
+   /* padding:10px 0px; */
+      
+}
+
+
+/*animation end*/
+#header >ul>a.btn{
+    color:#fff;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.btn{
+    background-color: blue;
+   padding:14px 48px;
+   border-radius: 30px;
+}
+
+
+
+
+
+
+/*oppenning section*/
+#open{
+   height:800px;
+   width:100%;
+   position:relative;
+  
+}
+#open::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    background:url("/IMAGES/firstbackground.webp") no-repeat center center/cover;
+    z-index:-1;
+}
+#box{
+    display:flex;
+    flex-direction: column;
+    align-items:flex-start;
+    justify-content:center;
+    padding-top:5px;
+    padding:13%;
+   
+
+}
+#box h1,#aboutbox h1,#mainmiddle h1{
+    font-size: 5rem;
+    
+}
+#box h5
+{
+    font-size: 1.5rem;
+    font-weight: lighter;
+}
+
+#box p >a,#aboutbox>p a{
+    background-color: blue;
+    padding:21px 40px;
+    margin:32px 22px;
+    color:white;
+    font-size: 1.5rem;
+    text-decoration: none;
+    
+    border-radius: 30px;
+}
+#box p >a:hover,#aboutbox>p a:hover{
+    background-color:maroon;
+}
+#box p {
+    margin-top: 40px;
+}
+
+
+
+  
+/*about section>*/
+#about{
+    height: 100vh;
+}
+/*mainabout section*/
+#mainabout{
+    display:flex;
+    align-items: center;
+    /*justify-content: space-around;*/
+}
+
+
+/*about box*/
+#aboutbox{
+    
+        display:flex;
+        flex-direction: column;
+        align-items:center;
+        justify-content:center;
+       
+}
+/*aboutbox img*/
+#about div#aboutimg{
+    height:677px;
+    width:445px;
+    background: url("/IMAGES/doctoroldpatient.webp")no-repeat center center/cover;
+  
+    margin-left: 15%;
+}
+#aboutbox p{
+    margin-top:10%;
+}
+
+
+
+/*services section*/
+
+#mainbox{
+    margin:34px;
+    display:flex;
+    padding:20px;
+
+}
+/*servicebox*/
+#mainbox .servicesbox{
+    border:2px solid red;
+    margin:26px;
+    padding:33px 36px;
+    border-radius: 18px;
+    background-color: rgb(206, 206, 237);
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+   
+   
+}
+
+#mainbox .servicesbox img{
+  height:70px;
+  
+   
+}
+
+#middle{
+    height:400px;
+   position:relative
+
+}
+#middle::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 100%;
+    background: url("/IMAGES/glass.webp") no-repeat center center;
+    background-size: cover;
+    opacity:0.8;
+    z-index:-1;
+
+}
+/*department section*/
+/*department*/
+#department{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+/*maindept*/
+#maindept{
+    display:grid;
+    /* width:70%; */
+   height:771px;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+#department div#img{
+  height:771px;
+  width:506px;
+  background:url("/IMAGES/handshake.webp") no-repeat center center/cover ;
+  /* background-color: aqua; */
+}
+
+/*deptbox*/
+.deptbox{
+    display:flex;
+    flex-direction: column;
+    margin:12px;
+    align-items: center;
+    justify-content: center;
+    
+    
+
+}
+.deptbox:hover{
+   background-color: blue;
+   color:white;
+   border-radius: 12px;
+    
+
+}
+.deptbox img{
+    height:50px;
+}
+.deptbox p{
+    font-size: 1.5rem;
+}
+
+/*contact section*/
+/*maincontact*/
+#maincontact{
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    height:60vh;
+
+}
+
+#maincontact .contactbox{
+    /* border:2px solid red; */
+    height:200px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+/*contactbox - img*/
+.contactbox img{
+    height:40px;
+    margin-bottom:"5%";
+}
+.contactbox p{
+    font-size: 1.5rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*utility class*/
+/*h1 primary*/
+
+ .h-primary{
+    font-size: 4rem ;   
+}
+.center{
+    text-align: center;
+}
+ .h-tertiary{
+    
+    font-size: 2rem;
+   
+}
+
+
+
+
+

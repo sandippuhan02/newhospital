@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+        
+</head>
+
+<body>
+
+    <section id="register">
+   
+
+        <div class="mainregister">
+
+            <form action="/register" method="post">
+           
+                
+                <div class="items">
+                    <label for="name">name</label><br>
+                    <input type="name" name="inputname" placeholder="enter your name">
+                </div>
+
+                <div class="items">
+                    <label for="age">age</label><br>
+                    <input type="age" name="inputage" placeholder="enter yourage">
+                </div>
+
+                <div class="items">
+                    <label for="email">Email</label><br>
+                    <input type="email" name="inputemail" placeholder="enter your email">
+                </div>
+                <div class="items">
+                    <label for="phone">Phone</label><br>
+                    <input type="number" name="inputphone" placeholder="enter your number">
+                </div>
+                <div>
+                    <label for="Dept:">Department</label>
+                    <select name="dept" id="sldept">
+                        <option name="dept" value="xray">xray</option>
+                        <option name="dept" value="cardiology">cardiology</option>
+                        <option name="dept" value="medicine">medicine</option>
+                    </select>
+                </div>
+                <!-- <div >
+                <label for="dept">department :</label>
+                <input type="radio" name="dept" value="xray">xray
+                <input type="radio" name="dept" value="cardiology">cardiology
+                <input type="radio" name="dept" value="medicine">medicine
+
+            </div> -->
+
+                <div class="items">
+                    <label for="password">password</label><br>
+                    <input type="password" name="inputpassword" placeholder="enter your password">
+                </div>
+                <div class="items">
+                    <label for="password">confirm password</label><br>
+                    <input type="password" name="inputcnfpassword" placeholder="confirm password">
+                </div>
+
+                <!-- <div class="items">
+           <select name="gender">
+            <option value="m">male</option>
+            <option value="f">female</option>
+           </select>
+           </div>  -->
+                <label for="">gender:</label><br>
+                <div class="items" id="span">
+                    <input type="radio" name="gender" value="m">male
+                    <input type="radio" name="gender" value="f">female
+                </div>
+
+
+                <input type="submit" class="btnsubmit" value="register">
+
+            </form>
+        </div>
+
+    </section>
+
+
+</body>
+
+</html>
