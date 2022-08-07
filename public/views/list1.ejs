@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding:0px;
+            margin:0px;
+        }
+        body{
+            background-color:#2f363f ;
+            width:100vw;
+            height:100vh;
+           
+           
+
+        }
+      .center  {
+            text-align: center;
+        }
+        div{
+            width:200px;
+            height:250px;
+            border:2px solid red;
+            padding:20px 22px;
+           margin: 12% 39%;
+           background:rgb(172, 164, 164);
+           color:black;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 class="center">Patient status</h1>
+
+   
+   <div>
+    <strong>Name:</strong><%= data1.name%><br>
+    <strong>Email:</strong><%= data1.email%><br>
+    <strong>gender:</strong><%= data1.gender%><br>
+    <strong>Phone:</strong><%= data1.phone%><br>
+    <strong>Department:</strong><%= data1.department%><br>
+    <strong>symptom:</strong><%= data1.symptom%><br>
+    <strong>Status:</strong><p>pending at admin level</p>
+   </div>
+    
+</body>
+</html>

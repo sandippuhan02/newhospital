@@ -38,7 +38,9 @@ const finalsSchema = new mongoose.Schema({
 
     },
     doctor:String,
-    department:String
+    department:String,
+    demail:String,
+    symptom:String,
 });
 module.exports = mongoose.model("finals", finalsSchema);
  

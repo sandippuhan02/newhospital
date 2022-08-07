@@ -70,13 +70,29 @@
 <body>
     <h1 class="center">User login page </h1>
     <div class="loginbox">
+        
         <form action="/login" method="post">
             <h3 class="center">User Login</h2>
             <p>Username </p>
-            <input name="inputname" class="item" type="text" placeholder="Enter Username">
+            <input name="inputname" class="item" type="gmail" placeholder="Enter Username">
             <p>password </p>
             <input name="pass" class="item" type="text" placeholder="password">
-            <input type="submit" value="Sign In">
+           
+            <p>department</p>
+            <select name="dept" id="sldept">
+                       
+               <option name="dept" value="Cardiology">Cardiology</option>
+               <option name="dept" value="Neurology">Neurology</option>
+               <option name="dept" value="medicine">medicine</option>
+               <option name="dept" value="Orthopedic">Orthopedic</option>
+               <option name="dept" value="Gynecology">Gynecology</option>
+               <option name="dept" value="Dermatology">Dermatology</option>
+               <option name="dept" value="Radiology">Radiology</option>
+               <option name="dept" value="Psychiatric">Psychiatric</option>
+               <option name="dept" value="Ophthalmology">Ophthalmology</option>
+           </select>
+
+           <input type="submit" value="Sign In">
 
         </form>
 

@@ -68,8 +68,9 @@
         <div class="box">
        <p class="item"> Name:<%= pdata.name%></p><br>
        <p class="item"> age:<%= pdata.age%></p><br>
+       <p class="item"> symptom:<%= pdata.symptom%></p><br>
         <p class="item">department:<%= pdata.department%></p><br>
-       <p class="'item"> doctor:<%= pdata.doctor%></p><br>
+       <p class="item"> doctor:<%= pdata.doctor%></p><br>
         
         <form action="/update" method="post">
             <input type="hidden"  name="presdata" value =<%= pdata._id%> >

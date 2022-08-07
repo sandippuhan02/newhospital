@@ -81,10 +81,11 @@
 
 
               <p class="items"><strong>Name:</strong> <%= pendingData.name%></p><br>
-              <p class="items">Email: <%= pendingData.email%></p><br>
-              <p class="items">Phone: <%= pendingData.phone%></p><br>
-              <p class="'items">Age: <%= pendingData.age%></p><br>
-              <p class="items">Department: <%= pendingData.department%></p>
+              <p class="items"><strong>Email:</strong> <%= pendingData.email%></p><br>
+              <p class="items"><strong>Phone:</strong> <%= pendingData.phone%></p><br>
+              <p class="'items"><strong>Age:</strong> <%= pendingData.age%></p><br>
+              <p class="'items"><strong>Symptom:</strong> <%= pendingData.symptom%></p><br>
+              <p class="items"><strong>Department:</strong> <%= pendingData.department%></p>
               
               <form method="post" action="/registerPatient/patient?id=<%= pendingData._id%>">
                 <p>Dotors available

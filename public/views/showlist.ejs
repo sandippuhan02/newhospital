@@ -58,6 +58,7 @@
         <th>Name</th>
         <th>Gender</th>
         <th>Department</th>
+        <th>Symptom</th>
         <th>Doctor</th>
         <th>Action</th>
     </tr>
@@ -66,6 +67,7 @@
             <td><%= data[i].name%></td>
             <td><%= data[i].gender%></td>
             <td><%= data[i].department%></td>
+            <td><%= data[i].symptom%></td>
             <td><%= data[i].doctor%></td>
             <td>
                 <form action="/doclog/prescribe?id=<%= data[i]._id%>" method="post">

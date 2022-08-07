@@ -2,21 +2,23 @@ let mongoose = require('mongoose');
 module.exports = new mongoose.model('pending',{
     name:{
         type:String,
-       // required:true
+       required:true,
+         unique:true
+
     },
    
     email:{
         type:String,
-        //required:true,
-        //unique:true
+        required:true,
+        unique:true
 
     },
     gender:{
-       // type:String
+       
     },
     phone:{
         type:Number,
-       // required:true,
+        required:true,
         
     },
     department:{ },
@@ -36,5 +38,6 @@ module.exports = new mongoose.model('pending',{
         type:Number,
         //required:true,
 
-    }
+    },
+    symptom:{},
 })

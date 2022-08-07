@@ -2,13 +2,13 @@ const mongoose = require("mongoose");
 const registersSchema = new mongoose.Schema({
     name:{
         type:String,
-       // required:true
+       required:true
     },
    
     email:{
         type:String,
-        //required:true,
-        //unique:true
+        required:true,
+        unique:true
 
     },
     gender:{
@@ -37,7 +37,9 @@ const registersSchema = new mongoose.Schema({
         //required:true,
 
     },
-    doctor:String
+    doctor:String,
+    demail:String,
+    symptom:String,
 });
 module.exports = mongoose.model("registers", registersSchema)
  

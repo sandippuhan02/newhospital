@@ -19,14 +19,17 @@
         }
         #heading{
             height:70px;
+           
 
             background-color: #8BD6F6;
             
         }
+        
        
         
         th,td{
-            padding:40px 45px;
+            padding:30px 45px;
+            text-align: center;
             
         }
         
@@ -46,6 +49,10 @@
             text-align: center;
 
         }
+        tr:hover{
+            background-color: rgba(0, 0, 0, 0.316);
+            border:1px solid red;
+        }
 
  </style>
 </head>
@@ -64,6 +71,7 @@
                 <th>Email</th>
                 <th>Age</th>
                 <th>Gender</th>
+                <th>symptom</th>
                 <th>Department</th>
                 <th>Approve</th>
                 <th>Reject</th>
@@ -75,6 +83,7 @@
                 <td><%= abc[i].email%></td>
                 <td><%= abc[i].age%></td>
                 <td><%= abc[i].gender%></td>
+                <td><%= abc[i].symptom%></td>
                 <td><%= abc[i].department%></td>
                
                 <td  class="center"><form action="/registers" method="post">

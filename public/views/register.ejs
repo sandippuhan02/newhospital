@@ -6,74 +6,149 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+   <style>
+    *padding{
+        margin:0px;
+        padding:0px;
+    }
+
+
+    body{
+        background: url("../images/reg.jpg") no-repeat center center/cover;
+        height:100vh;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
    
+
+
+
+
+    .register{
+        padding:50px;
+        background-color: rgba(0,0,0,0.5);
+        font-size: 15px;
+        border-radius: 10px;
+        border-radius: 1px solid rgba(255,255,255,0.3);
+        box-shadow: 2px 2px 15px rgba(0,0,0,0.3);
+        width:300px;
+        
+        color:#fff;
+    }
+    form>div>label, label#gender{
+        color:white;
+        font-family: sans-serif;
+    }
+    form>div>input{
+        width:100%;
+        border:1px solid #ddd;
+        border-radius: 3px;
+        outline:0;
+        padding: 7px;
+        background-color:#fff ;
+        box-shadow: inset 1px 1px 5px rgba(0,0,0,0.3) ;
+    }
+     .btnsubmit{
+        width:200px;
+        padding:7px;
+        font-size: 15px;
+        font-family: sans-serif;
+        border:none;
+        border-radius: 3px;
+        color:#fff;
+        cursor:pointer;
+        background-color: rgba(250,100,0,0.3);
+        box-shadow: inset 1px 1px 5px rgba(0,0,0,0.3) ;
+        margin:5% 10%;
+    }
+    /* form div select option{
+       
+        padding:5px;
+        width:100px;
+    } */
+
+
+   </style>
         
 </head>
 
 <body>
 
-    <section id="register">
+    
    
 
-        <div class="mainregister">
+        <div class="register">
 
             <form action="/register" method="post">
+               
            
                 
                 <div class="items">
-                    <label for="name">name</label><br>
-                    <input type="name" name="inputname" placeholder="enter your name">
-                </div>
+                    <label for="name">Name :</label><br>
+                    <input required id="username" type="name" name="inputname" placeholder="enter your name" required>
+                   
+                </div><br>
 
                 <div class="items">
-                    <label for="age">age</label><br>
-                    <input type="age" name="inputage" placeholder="enter yourage">
-                </div>
+                    <label for="age">Age :</label><br>
+                    <input required id="age" type="age" name="inputage" placeholder="enter yourage">
+                </div><br>
 
                 <div class="items">
-                    <label for="email">Email</label><br>
-                    <input type="email" name="inputemail" placeholder="enter your email">
-                </div>
+                    <label for="email">Email :</label><br>
+                    <input required type="email" id="email"name="inputemail" placeholder="enter your email">
+                </div><br>
+
                 <div class="items">
-                    <label for="phone">Phone</label><br>
-                    <input type="number" name="inputphone" placeholder="enter your number">
-                </div>
+                    <label for="phone">Phone :</label><br>
+                    <input required type="tel" pattern="[0-9]{10}"id="mob" name="inputphone" placeholder="enter your number">
+                </div><br>
+
                 <div>
-                    <label for="Dept:">Department</label>
-                    <select name="dept" id="sldept">
-                        <option name="dept" value="xray">xray</option>
-                        <option name="dept" value="cardiology">cardiology</option>
-                        <option name="dept" value="medicine">medicine</option>
-                    </select>
+                    <label for="symptoms"></label>symptom :
+                    <textarea required name="symptom" id="" cols="40" rows="5"></textarea>
                 </div>
-                <!-- <div >
-                <label for="dept">department :</label>
-                <input type="radio" name="dept" value="xray">xray
-                <input type="radio" name="dept" value="cardiology">cardiology
-                <input type="radio" name="dept" value="medicine">medicine
 
-            </div> -->
+                <div>
+                    <label for="Dept:">Department :</label>
+                    <select name="dept" id="sldept">
+                        
+                        <option name="dept" value="Cardiology">Cardiology</option>
+                        <option name="dept" value="Neurology">Neurology</option>
+                        <option name="dept" value="medicine">medicine</option>
+                        <option name="dept" value="Orthopedic">Orthopedic</option>
+                        <option name="dept" value="Gynecology">Gynecology</option>
+                        <option name="dept" value="Dermatology">Dermatology</option>
+                        <option name="dept" value="Radiology">Radiology</option>
+                        <option name="dept" value="Psychiatric">Psychiatric</option>
+                        <option name="dept" value="Ophthalmology">Ophthalmology</option>
+                    </select>
+                </div><br>
+              
 
                 <div class="items">
                     <label for="password">password</label><br>
-                    <input type="password" name="inputpassword" placeholder="enter your password">
-                </div>
+                    <input required id="password" type="password" name="inputpassword" placeholder="enter your password">
+                </div><br>
+
                 <div class="items">
                     <label for="password">confirm password</label><br>
                     <input type="password" name="inputcnfpassword" placeholder="confirm password">
-                </div>
+                </div><br>
 
-                <!-- <div class="items">
-           <select name="gender">
-            <option value="m">male</option>
-            <option value="f">female</option>
-           </select>
-           </div>  -->
-                <label for="">gender:</label><br>
-                <div class="items" id="span">
+               
+                <label id="gender">Gender:</label><br>
+                <span class="items" id="span">
+                    &nbsp;  &nbsp; &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;
+                    
                     <input type="radio" name="gender" value="m">male
+                    &nbsp;  &nbsp; &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp; 
+                     
                     <input type="radio" name="gender" value="f">female
-                </div>
+                </span><br>
 
 
                 <input type="submit" class="btnsubmit" value="register">
@@ -85,5 +160,19 @@
 
 
 </body>
+<script>
+
+    var username = document.getElementById("name");
+    var age = document.getElementById("age");
+    var email = document.getElementById("email");
+    var phone = document.getElementById("phone");
+    var sldept = document.getElementById("sldept");
+    var password = document.getElementById("password");
+
+
+  
+
+
+</script>
 
 </html>
